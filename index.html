@@ -29,6 +29,13 @@
                 height: 200px;
                 background: green;
                 border: 5px solid red;
+                margin: 20px;
+            }
+            .box5 {
+                width: 200px;
+                height: 200px;
+                background: green;
+                border: 5px solid red;
                 padding: 20px;
                 margin: 20px;
             }
@@ -65,9 +72,15 @@
             </div>
             <div>
                 <div class="box4">
-                    <p>I have width of 200px, border 5px, margin 20px, and padding 20px</p>
+                    <p>I have width of 200px, border 5px, and margin 20px</p>
                 </div>
                 <button id="box4">Find the width</button>
+            </div>
+            <div>
+                <div class="box5">
+                    <p>I have width of 200px, border 5px, margin 20px, and padding 20px</p>
+                </div>
+                <button id="box5">Find the width</button>
             </div>
 
         </section>
@@ -84,6 +97,9 @@
             });
             $('#box4').click(function() {
                 alert($('.box4').get(0).offsetWidth);
+            });
+            $('#box5').click(function() {
+                alert($('.box5').get(0).offsetWidth);
             });
         </script>
     </body>
