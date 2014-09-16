@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Box Model</title>
+        <style>
+            .box1 {
+                width: 200px;
+                height: 200px;
+                background: green;
+            }
+            .box2 {
+                width: 200px;
+                height: 200px;
+                background: green;
+                border: 5px solid red;
+            }
+            .box3 {
+                width: 200px;
+                height: 200px;
+                background: green;
+                border: 5px solid red;
+                padding: 20px;
+            }
+            .box4 {
+                width: 200px;
+                height: 200px;
+                background: green;
+                border: 5px solid red;
+                padding: 20px;
+                margin: 20px;
+            }
+            div > div {
+                display: inline-block;
+                vertical-align: top;
+            }
+            button {
+                padding: 10px 20px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div>
+                <div class="box1">
+                    <p>I have only width of 200px;</p>
+                </div>
+                <button id="box1">Find the width</button>
+            </div>
+            <div>
+                <div class="box2">
+                    <p>I have width of 200px and border 5px</p>
+                </div>
+                <button id="box2">Find the width</button>
+            </div>
+            <div>
+                <div class="box3">
+                    <p>I have width of 200px, border 5px, and padding 20px</p>
+                </div>
+                <button id="box3">Find the width</button>
+            </div>
+            <div>
+                <div class="box4">
+                    <p>I have width of 200px, border 5px, margin 20px, and padding 20px</p>
+                </div>
+                <button id="box4">Find the width</button>
+            </div>
+
+        </section>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>
+            $('#box1').click(function() {
+                alert($('.box1').get(0).offsetWidth);
+            });
+            $('#box2').click(function() {
+                alert($('.box2').get(0).offsetWidth);
+            });
+            $('#box3').click(function() {
+                alert($('.box3').get(0).offsetWidth);
+            });
+            $('#box4').click(function() {
+                alert($('.box4').get(0).offsetWidth);
+            });
+        </script>
+    </body>
+</html>
